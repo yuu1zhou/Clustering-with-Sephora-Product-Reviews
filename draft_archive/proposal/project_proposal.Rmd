@@ -1,0 +1,109 @@
+---
+title: 'STAT 437 Final Project Proposal'
+author: 'Yuzhou Fu'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Business Senario (What)
+
+Act as a data scientist in the beauty product company, apply NLP and unsupervised learning technique to mine online customer's product reviews and customer data, deliver business insights to the relevant stakeholders.
+
+-   Two main business objectives:
+
+    1.  **Product-centric**: Based on customer product reviews, cluster the reviews to discover the strengths and weaknesses of products that are in the same cluster, and analyze clusters by using available features to deliver insights to the product and marketing teams.
+
+    2.  **Customer-centric**: Create a customer dataframe (customer as the primary key) containing aggregated features such as avg_rating, total_reviews and preferred_category. Perform clustering on the customers to identify customer segments.
+
+    Analyze both clustering results, expecting the existence of cluster intersections, for example, one cluster of customers corresponds to one cluster of product reviews, which can be leveraged to design targeted customer actions.
+
+# Project Purpose (Why)
+
+-   Connecting the machine learning model results with business needs is crucial for data science practitioners in the industry. This project, which simulates a business scenario using machine learning techniques on a realistic Sephora dataset, provides a great chance for me to practice this ability.
+
+-   This proposed project is closely related to data science work in the fast-moving consumer goods industry, which is my intended career path. It provides an opportunity to develop a comprehensive project that can be included in my data science portfolio.
+
+# Project Phase (How)
+
+-   **11/11 \~ 16/11**
+
+    EDA
+
+    Data-preprocessing, text cleaning, text-preprocessing
+
+-   **17/11 \~ 23/11**
+
+    Data-preprocessing, text cleaning, text-preprocessing
+
+    Feature engineering:
+
+    -   word embedding: SBERT + NMF (tentative models, recommended by AI)
+
+-   **24/11 \~ 30/11**
+
+    Feature engineering:
+
+    -   word embedding: SBERT + NMF
+
+    -   Customer dataframe creation
+
+    Apply unsupervised learning
+
+    -   clustering
+
+-   **01/12 \~ 07/12**
+
+    Apply unsupervised learning
+
+    -   clustering
+
+    Analyze result
+
+    Project report
+
+-   **08/12 \~ 14/12**
+
+    Analyze result
+
+    Project report
+
+# Dataset
+
+-   [**Sephora Products and Skincare Reviews**](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews/data)
+
+    Primary key: product_id, review_id
+
+    Foreign key: product_id
+
+    -   Two tables:
+
+        -   product information (8494 products in total): product name, price ...
+
+        -   customer information (1,094,411 reviews in total, dates ranging from 2018 to 2023, may not use all the data): reviews, customer profile ...
+
+        ```{r out.width="50%", fig.align="center", echo=FALSE}
+        knitr::include_graphics("D:/MachineLearning/STAT_437_Final_Project/pic/dataset_relation.png")
+        ```
+
+# Reference
+
+-   [text cleaning and text preprocessing reference](https://www.kaggle.com/code/nkitgupta/aspect-based-sentiment-analysis)
+
+-   [NLP with Disaster Tweets - EDA, Cleaning and BERT](https://www.kaggle.com/code/gunesevitan/nlp-with-disaster-tweets-eda-cleaning-and-bert/notebook#0.-Introduction-and-References)
+
+- [N-grams](https://medium.com/@abhishekjainindore24/n-grams-in-nlp-a7c05c1aff12)
+
+- [A Comprehensive Guide to Word Embeddings in NLP](https://medium.com/@harsh.vardhan7695/a-comprehensive-guide-to-word-embeddings-in-nlp-ee3f9e4663ed)
+
+- [Twitter sentiment Extaction-Analysis,EDA and Model](https://www.kaggle.com/code/tanulsingh077/twitter-sentiment-extaction-analysis-eda-and-model#About-this-Competition)
+
+- [Word Clouds](https://www.kaggle.com/code/aashita/word-clouds-of-various-shapes)
+
+- [Skincare Products EDA & Sentiment Analysis (Exactly the same dataset using)](https://www.kaggle.com/code/melissamonfared/skincare-products-eda-sentiment-analysis/notebook)
+
+- [From Raw Text to Insightful Analysis: NLP Text Preprocessing Explained](https://medium.com/womenintechnology/from-raw-text-to-insightful-analysis-nlp-text-preprocessing-explained-03dad2d1a3c6)
+
+- [BERT Word Embeddings Tutorial](https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/)
